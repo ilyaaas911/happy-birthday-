@@ -1,0 +1,251 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Ines 🤍</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  background: radial-gradient(ellipse at bottom, #302044 0%, #100d20 55%, #070711 100%);
+  color: white;
+  font-family: Georgia, serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px 15px;
+}
+
+.stars {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.star {
+  position: absolute;
+  color: white;
+  animation: twinkle 2s infinite alternate;
+}
+
+@keyframes twinkle {
+  from { opacity: .15; transform: scale(.7); }
+  to { opacity: 1; transform: scale(1.2); }
+}
+
+.card {
+  position: relative;
+  width: 100%;
+  max-width: 440px;
+  text-align: center;
+  padding: 35px 23px;
+  border: 1px solid #ffffff26;
+  border-radius: 25px;
+  background: #ffffff0b;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 0 45px #bd75ff18;
+  animation: appear 1.5s ease both;
+}
+
+@keyframes appear {
+  from { opacity: 0; transform: translateY(25px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.small {
+  color: #e6c5ff;
+  letter-spacing: 4px;
+  font-size: 11px;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin-top: 14px;
+  font-size: clamp(38px, 11vw, 53px);
+  font-weight: normal;
+  color: #ffe5f2;
+  text-shadow: 0 0 25px #f3a6e7a0;
+}
+
+.cake {
+  font-size: 65px;
+  margin: 18px 0;
+  display: inline-block;
+  animation: float 3s ease-in-out infinite;
+  filter: drop-shadow(0 0 15px #ffb3df55);
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(-2deg); }
+  50% { transform: translateY(-9px) rotate(2deg); }
+}
+
+.intro {
+  font-size: 15px;
+  color: #e9ddec;
+  line-height: 1.8;
+}
+
+button {
+  margin-top: 25px;
+  padding: 13px 24px;
+  border: 1px solid #f5c6e7;
+  border-radius: 30px;
+  color: white;
+  background: linear-gradient(120deg, #9e609f, #684c91);
+  font-size: 15px;
+  cursor: pointer;
+  box-shadow: 0 0 20px #c17dc633;
+  transition: transform .3s, box-shadow .3s;
+}
+
+button:hover {
+  transform: scale(1.04);
+  box-shadow: 0 0 28px #c17dc666;
+}
+
+.message {
+  display: none;
+  margin-top: 27px;
+  color: #fff0fa;
+  font-size: 16px;
+  line-height: 2;
+  text-align: center;
+  white-space: pre-line;
+  animation: appear 1.2s ease both;
+}
+
+.signature {
+  color: #f3bde5;
+  margin-top: 20px;
+  font-style: italic;
+}
+
+.floating {
+  position: fixed;
+  bottom: -35px;
+  pointer-events: none;
+  animation: rise linear forwards;
+  z-index: 2;
+}
+
+@keyframes rise {
+  to {
+    transform: translateY(-115vh) rotate(35deg);
+    opacity: 0;
+  }
+}
+
+.footer {
+  margin-top: 25px;
+  color: #bba7c9;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+</style>
+</head>
+
+<body>
+<div class="stars" id="stars"></div>
+
+<main class="card">
+  <div class="small">a little something for you</div>
+
+  <h1>Happy Birthday,<br>Ines 🤍</h1>
+
+  <div class="cake">🎂</div>
+
+  <p class="intro">
+    Tonight, the world gets another year of you.<br>
+    And someone is wishing you the softest, happiest year. ✨
+  </p>
+
+  <button id="openBtn" onclick="openLetter()">
+    Open your little letter 💌
+  </button>
+
+  <div class="message" id="message">
+    عيد ميلاد سعيد، إيناس 🤍
+
+    ما عرفت شنو دايز فبالك هاد الأيام،
+    ولكن بغيتك تعرفي بلي ماشي ضروري
+    تكوني ديما بخير باش تستاهلي الفرح.
+
+    إلا كان شي نهار تقيل عليك،
+    نتمنى الأيام الجاية تكون أخف على قلبك،
+    وتجيك ضحكات من القلب،
+    وأخبار زوينة ما كنتيش كتسنايها. 🫶🏻
+
+    عندك بلاصة خاصة عندي،
+    وحتى التفاصيل الصغيرة ديالك كتهمني.
+    وكنتمنا نشوفك فرحانة،
+    ماشي غير اليوم، ولكن حتى فالأيام العادية.
+
+    نتمنى هاد العام يجيب ليك
+    كل خير كيتمنى قلبك،
+    ويعطيك أسباب كثيرة باش تضحكي. ✨
+
+    اليوم هو نهارك،
+    وخاصك تعرفي بلي وجودك عندو معنى،
+    وبلي كاين اللي كيتمنى ليك الخير بصدق.
+
+    Happy birthday, Ines. 🤍🎂
+
+    <div class="signature">
+      — someone who wishes you happiness, always ♡
+    </div>
+  </div>
+
+  <div class="footer">MADE WITH A LITTLE LOVE & CARE ♡</div>
+</main>
+
+<script>
+const stars = document.getElementById("stars");
+
+for (let i = 0; i < 85; i++) {
+  const star = document.createElement("span");
+  star.className = "star";
+  star.textContent = Math.random() > 0.5 ? "✦" : "·";
+  star.style.left = Math.random() * 100 + "%";
+  star.style.top = Math.random() * 100 + "%";
+  star.style.fontSize = (Math.random() * 12 + 5) + "px";
+  star.style.animationDelay = Math.random() * 3 + "s";
+  stars.appendChild(star);
+}
+
+function openLetter() {
+  const message = document.getElementById("message");
+  const button = document.getElementById("openBtn");
+
+  message.style.display = "block";
+  button.style.display = "none";
+
+  for (let i = 0; i < 30; i++) {
+    setTimeout(() => {
+      const heart = document.createElement("div");
+      heart.className = "floating";
+      heart.textContent = ["🤍", "💗", "✨", "♡", "🌸"][
+        Math.floor(Math.random() * 5)
+      ];
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.fontSize = (Math.random() * 20 + 14) + "px";
+      heart.style.animationDuration = (Math.random() * 4 + 4) + "s";
+
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 8500);
+    }, i * 140);
+  }
+}
+</script>
+</body>
+</html>
